@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import PhotoImage
 
 # Membuat welcome page
 welcome = tk.Tk()
@@ -7,6 +8,16 @@ welcome.configure(bg='#022B3A')
 welcome.attributes('-fullscreen', True)
 framewelcome = tk.Frame(welcome,bg='#022B3A')
 framewelcome.pack()
+
+# Load the image with PhotoImage and format="png"
+image_path = "D:\\Tugas Kuliah Semester 1\\PProkom\\Hi Papi\\Logo HIPAPI.png"
+img = tk.PhotoImage(file=image_path, format="png")
+
+# Resize the image using subsample
+img = img.subsample(10, 10)
+
+# Create a label to display the image
+label_img = tk.Label(welcome, image=img, bg='#022B3A')
 
 # Fungsi keluar
 def keluar():
@@ -32,8 +43,10 @@ keluar_button = tk.Button(
 
 #Menampilkan
 header.grid(row=4, column=0, columnspan=2, sticky="news", pady=40)
-subheader.grid(row=5, column=0,pady = 5)
+subheader.grid(row=6, column=0,pady = 5)
 lanjut_button.grid(row=9, column=0, pady=50)
-keluar_button.grid(row=10, column=0,pady = 0)   
+keluar_button.grid(row=10, column=0,pady = 0)
+label_img = tk.Label(framewelcome, image=img, bg='#022B3A')  
+label_img.grid(row=5, column=0, pady=5, padx=5)
 
 welcome.mainloop()

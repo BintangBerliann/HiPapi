@@ -448,7 +448,7 @@ def halaman_tentang_pajak():
     TP.grid_columnconfigure(0, weight=1)
 
     # Membuat label judul
-    label = tk.Label(frameTP, text="Pajak", font=("Ubuntu", 30), bg="#E1E5F2")
+    label = tk.Label(frameTP, text="Tentang Pajak", font=("Ubuntu", 30), bg="#E1E5F2")
     label.grid(row=0, column=0, pady=10)
 
     # Membuat scrollbar
@@ -464,11 +464,11 @@ def halaman_tentang_pajak():
     1. Pajak
 
     a) Pengertian Pajak
-        Pajak merupakan salah satu bagian penting dari perkembangan suatu negara. Pajak wajib dibayarkan oleh masyarakat pada suatu negara dalam bentuk dana berdasarkan jenis tertentu. Terdapat beberapa pengertian pajak menurut para ahli, yaitu sebagai berikut:
-        1) Menurut Kamus Besar Bahasa Indonesia (KBBI), arti kata pajak adalah pungutan wajib, biasanya berupa uang yang harus dibayar oleh penduduk sebagai sumbangan wajib kepada negara atau pemerintah sehubungan dengan pendapatan, pemilikan, harga beli barang, dan sebagainya.
-        2) Menurut (Novia, 2009) pajak adalah iuran yang harus dibayarkan oleh seluruh rakyat sebagai sumbangan pada negara.
-        3) Menurut (Wahyuningsih, 2016) pajak adalah peralihan kekayaan dari pihak rakyat kepada Kas Negara untuk membiayai pengeluaran rutin dan surplusnya digunakan untuk public saving yang merupakan sumber utama untuk membiayai public investment.
-        Berdasarkan beberapa sumber tersebut dapat disimpulkan bahwa pajak merupakan salah satu dana yang harus dibayarkan oleh wajib pajak berdasarkan UU yang berlaku. Hal tersebut berarti wajib pajak dapat mendapatkan pidana jika melanggar peraturan dalam wajib pajak.
+    Pajak merupakan salah satu bagian penting dari perkembangan suatu negara. Pajak wajib dibayarkan oleh masyarakat pada suatu negara dalam bentuk dana berdasarkan jenis tertentu. Terdapat beberapa pengertian pajak menurut para ahli, yaitu sebagai berikut:
+    1) Menurut Kamus Besar Bahasa Indonesia (KBBI), arti kata pajak adalah pungutan wajib, biasanya berupa uang yang harus dibayar oleh penduduk sebagai sumbangan wajib kepada negara atau pemerintah sehubungan dengan pendapatan, pemilikan, harga beli barang, dan sebagainya.
+    2) Menurut (Novia, 2009) pajak adalah iuran yang harus dibayarkan oleh seluruh rakyat sebagai sumbangan pada negara.
+    3) Menurut (Wahyuningsih, 2016) pajak adalah peralihan kekayaan dari pihak rakyat kepada Kas Negara untuk membiayai pengeluaran rutin dan surplusnya digunakan untuk public saving yang merupakan sumber utama untuk membiayai public investment.
+    Berdasarkan beberapa sumber tersebut dapat disimpulkan bahwa pajak merupakan salah satu dana yang harus dibayarkan oleh wajib pajak berdasarkan UU yang berlaku. Hal tersebut berarti wajib pajak dapat mendapatkan pidana jika melanggar peraturan dalam wajib pajak.
 
     b) Fungsi Pajak
     Pajak memiliki peranan penting dalam upaya pembangunan suatu negara. Hal ini dikarenakan pajak merupakan sumber pendapatan negara untuk membiayai pengeluaran, termasuk pengeluaran pembangunan (Kusnanto, 2019). Dilansir dari DTDC News, pajak merupakan salah satu sumber pembiayaan pembangunan yang paling besar dan berkelanjutan, kerana pajak berkontribusi sebesar 80% dari total pendapatan pada 50% negara di dunia, termasuk Indonesia. Selain fungsi pembiayaan,  pajak memiliki beberapa fungsi utama, yaitu sebagai berikut:
@@ -512,6 +512,8 @@ def halaman_tentang_pajak():
     Definisi dari pajak kendaraan telah diatur pada Pasal 1 angka 12 dan 13 Undang-Undang Nomor 28 Tahun 2009 tentang pajak Daerah dan Retribusi Daerah (UU PDRD). Pada implementasi perpajakan, peraturan terkait pajak kendaraan diatur pada PERMENDAGRI No. 1 Tahun 2021 tentang perhitungan dasar pengenaan pajak kendaraan bermotor dan bea balik nama.
     """
     text.insert('insert', content)
+
+    content.rjust()
 
     # Menambahkan format bold untuk bagian 'II.1 Pajak', 'II.2 Pajak Bumi dan Bangunan', 'II.3 Pajak Penghasilan', 'II.4 Pajak Kendaraan'
     for section in ['1. Pajak', 'a) Pengertian Pajak', 'b) Fungsi Pajak', 'c) Dasar Hukum Pajak', '2. Pajak Bumi dan Bangunan', 'a) Pengertian Pajak Bumi dan Bangunan', 'b) Dasar Hukum Pajak Bumi dan Bangunan', '3. Pajak Penghasilan', 'a) Pengertian Pajak Penghasilan', 'b) Dasar Hukum Pajak Penghasilan', '4. Pajak Kendaraan', 'a) Pengertian Pajak Kendaraan', 'b) Dasar Hukum Pajak Kendaraan']:
