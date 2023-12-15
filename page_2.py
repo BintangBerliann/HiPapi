@@ -166,7 +166,7 @@ def halaman_pajak_penghasilan():
         framePP, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
     #Hasil
     HasilPP = tk.Label(
-        framePP, text="",bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
+        framePP, bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
 
     #Menampilkan
     PP_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
@@ -280,7 +280,7 @@ def halaman_pajak_kendaraan():
         framePK, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
     #Hasil
     HasilPK = tk.Label(
-        framePK, text="",bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
+        framePK, bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
 
     #Menampilkan
     PK_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
@@ -362,7 +362,7 @@ def halaman_pbb():
         framePBB, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
     #Hasil
     HasilPBB = tk.Label(
-        framePBB, text="",bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
+        framePBB, bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
 
     #Menampilkan
     PBB_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
@@ -512,8 +512,6 @@ def halaman_tentang_pajak():
     Definisi dari pajak kendaraan telah diatur pada Pasal 1 angka 12 dan 13 Undang-Undang Nomor 28 Tahun 2009 tentang pajak Daerah dan Retribusi Daerah (UU PDRD). Pada implementasi perpajakan, peraturan terkait pajak kendaraan diatur pada PERMENDAGRI No. 1 Tahun 2021 tentang perhitungan dasar pengenaan pajak kendaraan bermotor dan bea balik nama.
     """
     text.insert('insert', content)
-
-    content.rjust()
 
     # Menambahkan format bold untuk bagian 'II.1 Pajak', 'II.2 Pajak Bumi dan Bangunan', 'II.3 Pajak Penghasilan', 'II.4 Pajak Kendaraan'
     for section in ['1. Pajak', 'a) Pengertian Pajak', 'b) Fungsi Pajak', 'c) Dasar Hukum Pajak', '2. Pajak Bumi dan Bangunan', 'a) Pengertian Pajak Bumi dan Bangunan', 'b) Dasar Hukum Pajak Bumi dan Bangunan', '3. Pajak Penghasilan', 'a) Pengertian Pajak Penghasilan', 'b) Dasar Hukum Pajak Penghasilan', '4. Pajak Kendaraan', 'a) Pengertian Pajak Kendaraan', 'b) Dasar Hukum Pajak Kendaraan']:
