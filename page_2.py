@@ -8,7 +8,6 @@ main = tk.Tk()
 main.title("Hi Papi")
 main.attributes('-fullscreen', True)
 main.configure(bg='#022B3A')
-f = ("Ubuntu", 14)
 frame = Frame(bg='#022B3A')
 frame.pack()
 
@@ -54,7 +53,7 @@ def halaman_pajak_penghasilan():
     clickedkerja = StringVar() 
     clickedkerja.set( "")
     dropkerja = OptionMenu(framePP, clickedkerja, *options)
-    dropkerja.config(width=33)  # Adjust the width as needed
+    dropkerja.config(width=18,font=("Ubuntu",15))
     dropkerja.grid(row=3, column=1,pady = 20)
     clickedkerja.get()
 
@@ -140,36 +139,21 @@ def halaman_pajak_penghasilan():
         PP.withdraw()
         main.deiconify()
 
-    #Judul
-    PP_label = tk.Label(
-        framePP, text="Pajak Penghasilan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
-    #Input Gaji Pokok
-    GajiPokok_label = tk.Label(
-        framePP, text="Gaji Pokok (per bulan)", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
+    # Membuat widgets PP
+    PP_label = tk.Label(framePP, text="Pajak Penghasilan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
+    GajiPokok_label = tk.Label(framePP, text="Gaji Pokok (per bulan)", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
     GajiPokok_entry = tk.Entry(framePP, font=("Ubuntu", 16))
-    #Input Gaji Tambahan
-    GajiTambahan_label = tk.Label(
-        framePP, text="Gaji Tambahan (per bulan)", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
+    GajiTambahan_label = tk.Label(framePP, text="Gaji Tambahan (per bulan)", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
     GajiTambahan_entry = tk.Entry(framePP, font=("Ubuntu", 16))
-    #Input status pekerjaan
-    StatusKerja_label = tk.Label(
-        framePP, text="Status Pekerjaan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
-    #Input jumlah tanggungan
-    Tanggungan_label = tk.Label(
-        framePP, text="Jumlah Tanggungan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
+    StatusKerja_label = tk.Label(framePP, text="Status Pekerjaan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
+    Tanggungan_label = tk.Label(framePP, text="Jumlah Tanggungan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=30)
     Tanggungan_entry = tk.Entry(framePP, font=("Ubuntu", 16))
-    ##Tombol submit
-    submit_button = tk.Button(
-        framePP, text="Hitung", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), command=SubmitPP)
-    #Tombol kembali
-    backBTN = tk.Button(
-        framePP, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
-    #Hasil
-    HasilPP = tk.Label(
-        framePP, bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
+    submit_button = tk.Button(framePP, text="Hitung", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), command=SubmitPP)
+    backBTN = tk.Button(framePP, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
+    HasilPP = tk.Label(framePP, text="",bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
 
-    #Menampilkan
-    PP_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
+    #Menampilkan widgets PP
+    PP_label.grid(row=0, column=0, columnspan=2, pady=(60,40))
     GajiPokok_label.grid(row=1, column=0,pady = 20)
     GajiPokok_entry.grid(row=1, column=1, pady=20)
     GajiTambahan_label.grid(row=2, column=0, pady=20)
@@ -199,7 +183,7 @@ def halaman_pajak_kendaraan():
     clickedkendaraan = StringVar()
     clickedkendaraan.set( "")
     dropkendaraan = OptionMenu(framePK, clickedkendaraan, *option1)
-    dropkendaraan.config(width=33)  # Adjust the width as needed
+    dropkendaraan.config(width=18,font=("Ubuntu",15))
     dropkendaraan.grid(row=1, column=1,pady = 20)
     clickedkendaraan.get()
     
@@ -258,32 +242,19 @@ def halaman_pajak_kendaraan():
         PK.withdraw()
         main.deiconify()
 
-    #Judul
-    PK_label = tk.Label(
-        framePK, text="Pajak Kendaraan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
-    #Input Jenis Kendaraan
-    JenisK_label = tk.Label(
-        framePK, text="Jenis Kendaraan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
-    #Input cc
-    CC_label = tk.Label(
-        framePK, text="CC", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
+    # Membuat widgets PK
+    PK_label = tk.Label(framePK, text="Pajak Kendaraan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
+    JenisK_label = tk.Label(framePK, text="Jenis Kendaraan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
+    CC_label = tk.Label(framePK, text="CC", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
     CC_entry = tk.Entry(framePK, font=("Ubuntu", 16))
-    #Input nilai jual
-    NilaiJual_label = tk.Label(
-        framePK, text="Nilai Jual", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
+    NilaiJual_label = tk.Label(framePK, text="Nilai Jual", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
     NilaiJual_entry = tk.Entry(framePK, font=("Ubuntu", 16))
-    ##Tombol submit
-    submit_button = tk.Button(
-        framePK, text="Hitung", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), command=SubmitPK)
-    #Tombol kembali
-    backBTN = tk.Button(
-        framePK, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
-    #Hasil
-    HasilPK = tk.Label(
-        framePK, bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
+    submit_button = tk.Button(framePK, text="Hitung", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), command=SubmitPK)
+    backBTN = tk.Button(framePK, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
+    HasilPK = tk.Label(framePK, text="",bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
 
-    #Menampilkan
-    PK_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
+    #Menampilkan widgets PK
+    PK_label.grid(row=0, column=0, columnspan=2, pady=(100,40))
     JenisK_label.grid(row=1, column=0,pady = 20)
     CC_label.grid(row=2, column=0, pady=20)
     CC_entry.grid(row=2, column=1, pady=20)
@@ -343,29 +314,18 @@ def halaman_pbb():
         PBB.withdraw()
         main.deiconify()
 
-    #Judul
-    PBB_label = tk.Label(
-        framePBB, text="Pajak Bumi dan Bangunan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
-    #Input Luas Tanah
-    LuasTanah_label = tk.Label(
-        framePBB, text="Luas Tanah", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20,justify=tk.LEFT)
+    # Membuat widgets PBB
+    PBB_label = tk.Label(framePBB, text="Pajak Bumi dan Bangunan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
+    LuasTanah_label = tk.Label(framePBB, text="Luas Tanah (m²)", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20,justify=tk.LEFT)
     LuasTanah_entry = tk.Entry(framePBB, font=("Ubuntu", 16))
-    #Input Luas Bangunan
-    LuasBangunan_label = tk.Label(
-        framePBB, text="Luas Bangunan", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
+    LuasBangunan_label = tk.Label(framePBB, text="Luas Bangunan (m²)", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 16),width=20)
     LuasBangunan_entry = tk.Entry(framePBB, font=("Ubuntu", 16))
-    ##Tombol submit
-    submit_button = tk.Button(
-        framePBB, text="Hitung", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), command=SubmitPBB)
-    #Tombol kembali
-    backBTN = tk.Button(
-        framePBB, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
-    #Hasil
-    HasilPBB = tk.Label(
-        framePBB, bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
+    submit_button = tk.Button(framePBB, text="Hitung", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), command=SubmitPBB)
+    backBTN = tk.Button(framePBB, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
+    HasilPBB = tk.Label(framePBB, text="",bg="#FFFFFF",fg="#022B3A", font=("Ubuntu", 16))
 
-    #Menampilkan
-    PBB_label.grid(row=0, column=0, columnspan=2, sticky="news", pady=40)
+    #Menampilkan widgets PBB
+    PBB_label.grid(row=0, column=0, columnspan=2, pady=(150,40))
     LuasTanah_label.grid(row=1, column=0,pady = 20)
     LuasTanah_entry.grid(row=1, column=1, pady=20)
     LuasBangunan_label.grid(row=2, column=0, pady=20)
@@ -394,33 +354,22 @@ def halaman_bill():
         bill.withdraw()
         main.deiconify()
 
-    bill_label = tk.Label(
-        framebill, text="Bill", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 30))
-    LabelNama1 = tk.Label(
-        framebill, text="Nama", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelNama2 = tk.Label(
-        framebill, text=f"{DataDiri[0]}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)   
-    LabelPP1 = tk.Label(
-        framebill, text="Jumlah Pajak Penghasilan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelPP2 = tk.Label(
-        framebill, text=f"{FormatedTotalPP}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelPK1 = tk.Label(
-        framebill, text="Jumlah Pajak Kendaraan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelPK2 = tk.Label(
-        framebill, text=f"{FormatedTotalPK}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)    
-    LabelPBB1 = tk.Label(
-        framebill, text="Jumlah Pajak Bumi dan Bangunan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelPBB2 = tk.Label(
-        framebill, text=f"{FormatedTotalPBB}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelPAPI1 = tk.Label(
-        framebill, text="Total Pajak Yang Dibayarkan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    LabelPAPI2 = tk.Label(
-        framebill, text=f"{FormatedTotalPAPI}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)
-    backBTN = tk.Button(
-        framebill, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
+    #Membuat widgets halaman bill
+    bill_label = tk.Label(framebill, text="Bill", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 30))
+    LabelNama1 = tk.Label(framebill, text="Nama", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelNama2 = tk.Label(framebill, text=f"{DataDiri[0]}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)   
+    LabelPP1 = tk.Label(framebill, text="Jumlah Pajak Penghasilan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelPP2 = tk.Label(framebill, text=f"{FormatedTotalPP}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelPK1 = tk.Label(framebill, text="Jumlah Pajak Kendaraan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelPK2 = tk.Label(framebill, text=f"{FormatedTotalPK}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)    
+    LabelPBB1 = tk.Label(framebill, text="Jumlah Pajak Bumi dan Bangunan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelPBB2 = tk.Label(framebill, text=f"{FormatedTotalPBB}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelPAPI1 = tk.Label(framebill, text="Total Pajak Yang Dibayarkan", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    LabelPAPI2 = tk.Label(framebill, text=f"{FormatedTotalPAPI}", bg='#FFFFFF', fg="#022B3A", font=("Ubuntu", 16),width=30)
+    backBTN = tk.Button(framebill, text="Kembali", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=Back)
 
-    #Menampilkan
-    bill_label.grid(row=0, column=4, columnspan=2, sticky="news", pady=40)
+    # Menampilkan widgets halaman bill
+    bill_label.grid(row=0, column=4, columnspan=2, sticky="news", pady=(50))
     LabelNama1.grid(row=1, column=1,pady = 10)
     LabelNama2.grid(row=1, column=7,pady = 10)
     LabelPP1.grid(row=2, column=1, sticky="news", pady=10)
@@ -431,19 +380,17 @@ def halaman_bill():
     LabelPBB2.grid(row=4, column=7, sticky="news", pady=10)
     LabelPAPI1.grid(row=5, column=1, sticky="news", pady=10)
     LabelPAPI2.grid(row=5, column=7, sticky="news", pady=10)
-    backBTN.grid(row=15, column=4, columnspan=2, sticky="news", pady=20)
+    backBTN.grid(row=15, column=4, columnspan=2, sticky="news", pady=(350,0))
 
 # Membuat halaman tentang pajak
 def halaman_tentang_pajak():
     main.withdraw()
-    # Membuat window baru
     TP = tk.Tk()
     TP.title("Hi Papi")
     TP.attributes('-fullscreen', True)
     TP.configure(bg='#E1E5F2')
     frameTP = tk.Frame(TP, bg="#E1E5F2")
     frameTP.grid(sticky='nsew')
-    # Mengatur konfigurasi grid
     TP.grid_rowconfigure(0, weight=1)
     TP.grid_columnconfigure(0, weight=1)
 
@@ -554,42 +501,30 @@ def halaman_keluar():
     def keluar():
         exit()
 
-    #Judul
-    keluar_label = tk.Label(
-        framekeluar, text="Terima kasih telah menggunakan program ini!", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 30))
-    #subheader
-    subheader = tk.Label(
-    framekeluar, text="Beli barang elit, bayar pajak sulit. Chuaks~", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16))
-    keluar_button = tk.Button(
-       framekeluar, text="Keluar", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=keluar)
+    # Membuat widgets halaman keluar
+    keluar_label = tk.Label(framekeluar, text="Terima kasih telah menggunakan program ini!", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 30))
+    subheader = tk.Label(framekeluar, text="Beli barang elit, bayar pajak sulit. Chuaks~", bg='#E1E5F2', fg="#022B3A", font=("Ubuntu", 16))
+    keluar_button = tk.Button(framekeluar, text="Keluar", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=keluar)
     
-    #Menampilkan
-    keluar_label.grid(row=0, column=4, columnspan=2, sticky="news", pady=40)
-    subheader.grid(row=1, column=4, columnspan=2, sticky="news", pady=0)
-    keluar_button.grid(row=5, column=4,columnspan=2,pady = 20)   
+    # Menampilkan widgets halaman keluar
+    keluar_label.grid(row=0, column=4, columnspan=2, pady=(340,10))
+    subheader.grid(row=1, column=4, columnspan=2, pady=0)
+    keluar_button.grid(row=5, column=4,columnspan=2,pady = 30)   
 
-# Membuat menu utama pada window utama
+# Membuat widgets menu utama
 button_width = 35
 button_height = 1
 
-menu_utama_label = Label(
-    frame, text="MENU UTAMA", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30)
-)
-pajak_penghasilan = Button(
-    frame, text="Hitung Pajak Penghasilan", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_pajak_penghasilan)
-pajak_kendaraan = Button(
-    frame, text="Hitung Pajak Kendaraan", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_pajak_kendaraan)
-pajak_bb = Button(
-    frame, text="Hitung Pajak Bumi dan Bangunan", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_pbb)
-bill = Button(
-    frame, text="Cetak Bill", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_bill)
-tentang_pajak = Button(
-    frame, text="Tentang Pajak", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_tentang_pajak)
-keluar = Button(
-    frame, text="Keluar", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=halaman_keluar)
+menu_utama_label = Label(frame, text="MENU UTAMA", bg='#022B3A', fg="#FFFFFF", font=("Ubuntu", 30))
+pajak_penghasilan = Button(frame, text="Hitung Pajak Penghasilan", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_pajak_penghasilan)
+pajak_kendaraan = Button(frame, text="Hitung Pajak Kendaraan", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_pajak_kendaraan)
+pajak_bb = Button(frame, text="Hitung Pajak Bumi dan Bangunan", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_pbb)
+bill = Button(frame, text="Cetak Bill", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_bill)
+tentang_pajak = Button(frame, text="Tentang Pajak", bg="#FFFFFF", fg="#022B3A", font=("Ubuntu", 16), width=button_width, height=button_height, command=halaman_tentang_pajak)
+keluar = Button(frame, text="Keluar", bg="#022B3A", fg="#FFFFFF", font=("Ubuntu", 16), command=halaman_keluar)
 
-# Menampilkan
-menu_utama_label.grid(row=0, column=0, padx=10, pady=40)
+# Menampilkan widgets menu utama
+menu_utama_label.grid(row=0, column=0, padx=10, pady=(170,40))
 pajak_penghasilan.grid(row=1, column=0, padx=10, pady=10)
 pajak_kendaraan.grid(row=2, column=0, padx=10, pady=10)
 pajak_bb.grid(row=3, column=0, padx=10, pady=10)
